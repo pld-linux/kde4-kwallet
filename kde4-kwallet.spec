@@ -5,12 +5,12 @@
 
 Summary:	K Desktop Environment - KDE Wallet Manager
 Name:		kde4-kwallet
-Version:	4.10.2
+Version:	4.10.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	57fb9acba9b9b21713e0d359bb453aa5
+# Source0-md5:	0eb0ed607f3f6d902de9fac28a47284e
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdebase-devel >= %{version}
 Obsoletes:	kde4-kdeutils-kwalletmanager

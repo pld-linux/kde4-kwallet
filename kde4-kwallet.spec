@@ -5,12 +5,12 @@
 
 Summary:	K Desktop Environment - KDE Wallet Manager
 Name:		kde4-kwallet
-Version:	4.11.4
+Version:	4.12.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	c2138ce2f398105d51676e01a3e0cc57
+# Source0-md5:	f627fe1df6a56f79e107ba5110dfc0a2
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdebase-devel >= %{version}
 Obsoletes:	kde4-kdeutils-kwalletmanager
@@ -45,10 +45,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kwalletmanager
 %attr(755,root,root) %{_libdir}/kde4/kcm_kwallet.so
-%{_desktopdir}/kde4/kwalletmanager-kwalletd.desktop
-%{_desktopdir}/kde4/kwalletmanager.desktop
+%attr(755,root,root) %{_libdir}/kde4/libexec/kcm_kwallet_helper
 %{_datadir}/apps/kwalletmanager
-%{_iconsdir}/hicolor/*/apps/kwalletmanager.png
-%{_iconsdir}/hicolor/*/apps/kwalletmanager2.png
+%{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet.service
 %{_datadir}/kde4/services/kwalletconfig.desktop
 %{_datadir}/kde4/services/kwalletmanager_show.desktop
+%{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet.policy
+%{_desktopdir}/kde4/kwalletmanager.desktop
+%{_desktopdir}/kde4/kwalletmanager-kwalletd.desktop
+/etc/dbus-1/system.d/org.kde.kcontrol.kcmkwallet.conf
+%{_iconsdir}/hicolor/*/apps/kwalletmanager2.png
+%{_iconsdir}/hicolor/*/apps/kwalletmanager.png

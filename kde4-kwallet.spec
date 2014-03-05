@@ -1,16 +1,16 @@
 #
 %define		_state		stable
-%define		orgname		kwallet
+%define		orgname		kwalletmanager
 %define		qtver		4.8.3
 
 Summary:	K Desktop Environment - KDE Wallet Manager
 Name:		kde4-kwallet
-Version:	4.12.2
+Version:	4.12.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	2d1a6b21ff0dff16eab28a53e4014677
+# Source0-md5:	7f5dcd4bc1bd4cd99cf3de0844932b37
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdebase-devel >= %{version}
 Obsoletes:	kde4-kdeutils-kwalletmanager
@@ -36,12 +36,12 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
-%find_lang %{orgname} --with-kde
+#%find_lang %{orgname} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{orgname}.lang
+%files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kwalletmanager
 %attr(755,root,root) %{_libdir}/kde4/kcm_kwallet.so

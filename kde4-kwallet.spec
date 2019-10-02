@@ -6,7 +6,7 @@
 Summary:	K Desktop Environment - KDE Wallet Manager
 Name:		kde4-kwallet
 Version:	4.14.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
